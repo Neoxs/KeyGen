@@ -10,4 +10,11 @@ class Product extends Model
     protected $fillable = [
         'name', 'description',
     ];
+
+    // Defining Relations
+
+    public function keys()
+    {
+        return $this->hasMany(License::class);
+    }
 }
