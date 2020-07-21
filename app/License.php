@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class License extends Model
 {
     // The attributes that are mass assignable.
     protected $fillable = [
-        'name', 'description',
+        'user_id', 'product_id', 'key',
     ];
 }
