@@ -24,3 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductController@index');
 
 Route::post('/products', 'ProductController@store');
+
+Route::get('/licenses', 'LicenseController@index');
+
+Route::post('/products/{product}/licenses', 'LicenseController@store');
+
+Route::delete('/licenses/{license}', 'LicenseController@destroy');

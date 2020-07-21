@@ -9,6 +9,7 @@ class ProductController extends Controller
 {
     // @desc    GET all products
     // @route   GET /products
+    // @action  index
     // @access  Public
     public function index()
     {
@@ -21,9 +22,10 @@ class ProductController extends Controller
 
     // @desc    Add product
     // @route   POST /products
+    // @action  store
     // @access  Only Admin
     public function store() {
-        // Valide the data
+        // Validating the data
         $data = request()->validate([
             'name' => 'required',
             'description' => 'required',

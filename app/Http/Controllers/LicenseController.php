@@ -17,6 +17,7 @@ class LicenseController extends Controller
     {
         $licenses = auth()->user()->keys()->get();
 
+        // Only for testing
         return response($licenses);
     }
 
@@ -26,6 +27,7 @@ class LicenseController extends Controller
     // @access  Authenticated users
     public function store(Product $product)
     {
+        // Checking if the user already has an exsiting license for that product
         $oldKey = auth()->user()->keys()->where('product_id', $product->id)->first();
         if ($oldKey === null) {
             $prefix = 'KeyGen-' . Str::slug($product->name) . '-' . Str::slug(auth()->user()->name);
@@ -37,9 +39,11 @@ class LicenseController extends Controller
             $license->key = $key;
             $license->save();
 
+            // Only for testing
             return response($license);
         }
 
+        // Only for testing
         return response($oldKey);
 
     }
@@ -52,6 +56,7 @@ class LicenseController extends Controller
     {
         $license->delete();
 
+        // Only for testing
         return response('license was deleted');
     }
 }
