@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        
-        <!-- Styles -->        
+
+        <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
+
         <title>{{ config('app.name', 'KeyGen') }}</title>
 
         <!-- Scripts -->
@@ -74,7 +74,7 @@
                         </li>
 
                         <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
+                            <a href="/products" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-price-tag"></use>
                                 </svg>
@@ -83,7 +83,7 @@
                         </li>
 
                         <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
+                            <a href="/licenses" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-key"></use>
                                 </svg>
@@ -92,12 +92,16 @@
                         </li>
 
                         <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
+                            <a class="side-nav__link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-log-out"></use>
                                 </svg>
                                 <span>Log Out</span>
                             </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
 

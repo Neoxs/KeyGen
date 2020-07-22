@@ -93,9 +93,8 @@ button {
 }
 
 .main-view {
-  background-color: #fff;
+  background-color: var(--color-grey-light-1);
   height: 80rem;
-  background-color: orangered;
   flex: 1;
 }
 
@@ -270,5 +269,71 @@ button {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+.licenses-table {
+  border-collapse: collapse;
+  margin: 2.5rem auto;
+  font-size: 1.4rem;
+  min-width: 80%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+}
+
+.licenses-table thead tr {
+  background-color: var(--color-grey-dark-1);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.licenses-table th,
+.licenses-table td {
+  padding: 1.2rem 1.5rem;
+}
+
+.licenses-table tbody tr {
+  border-bottom: 1px solid var(--color-grey-light-1);
+  position: relative;
+}
+
+.licenses-table tbody tr:nth-of-type(even) {
+  background-color: var(--color-grey-light-3);
+}
+
+.licenses-table tbody tr:last-of-type {
+  border-bottom: 0.2rem solid var(--color-primary);
+}
+
+.licenses-table tbody tr:hover {
+  color: var(--color-primary);
+}
+
+.licenses-table .row .item {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  /*&:hover .item__value { transform: translateX(-20px); */
+}
+
+.licenses-table .row .item__delete {
+  float: left;
+  margin-left: 2rem;
+}
+
+.licenses-table .row .item__delete-btn {
+  width: 1.75rem;
+  display: none;
+}
+
+.licenses-table .row .item__delete-btn:active {
+  transform: translateY(2px);
+}
+
+.licenses-table .row .item:hover .item__delete-btn {
+  display: block;
+  height: 1.75rem;
 }
 

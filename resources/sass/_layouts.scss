@@ -33,11 +33,10 @@
 }
 
 .main-view {
-    background-color: #fff;
+    background-color: var(--color-grey-light-1);
 
     // FOR TESTING
     height: 80rem;
-    background-color: orangered;
 
     flex: 1;
 }
