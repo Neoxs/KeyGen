@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
-        <title>{{ config('app.name', 'Laravel') }</title>
+        <title>{{ config('app.name', 'KeyGen') }}</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,17 +44,66 @@
                         <svg class="user-nav__icon">
                             <use xlink:href="img/sprite.svg#icon-chat"></use>
                         </svg>
-                        <span class="usr-nav__notification">13</span>
+                        <span class="user-nav__notification">13</span>
                     </div>
                     <div class="user-nav__user">
-                        <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
-                        <span class="usr-nav__user-name">{{ Auth::user()->name }}</span>
+                        <img src="img/user.png" alt="User photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">{{ Auth::user()->name }}</span>
                     </div>
                 </nav>
             </header>
             <div class="content">
                 <nav class="sidebar">
-                    Navigation
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                                </svg>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-price-tag"></use>
+                                </svg>
+                                <span>Products</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>My Licenses</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                                </svg>
+                                <span>Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="legal">
+                        &copy; <script>document.write(new Date().getFullYear())</script> by KeyGen. All rights reserved.
+                    </div>
                 </nav>
                 <main class="main-view">
                     @yield('content')

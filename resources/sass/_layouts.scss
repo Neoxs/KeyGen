@@ -8,9 +8,14 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -21,10 +26,17 @@
     background-color: var(--color-grey-dark-1);
 
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-view {
     background-color: #fff;
+
+    // FOR TESTING
+    height: 80rem;
     background-color: orangered;
 
     flex: 1;
