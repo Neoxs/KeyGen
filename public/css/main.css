@@ -271,6 +271,13 @@ button {
   padding: 2.5rem;
 }
 
+.licenses-header {
+  text-align: center;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
 .licenses-table {
   border-collapse: collapse;
   margin: 2.5rem auto;

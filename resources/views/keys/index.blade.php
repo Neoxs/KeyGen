@@ -1,22 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-    <h2>Your Products Lincecses</h2>
+    <h2 class="licenses-header">Your Products Lincecses</h2>
+    <br>
     <table class="licenses-table">
         <thead class="licenses__head">
         <tr class="head__row">
-            <th>ID</th>
+            <th>#</th>
             <th>License</th>
             <th>Product</th>
             <th>Generated at</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($licenses as $license)
+        @foreach($licenses as $key => $license)
             <tr class="row">
-                <td>{{ $license->id }}</td>
+                <td>{{ $key + 1 }}</td>
                 <td>{{ $license->key }}</td>
-                <td>{{ $license->product()->name }}</td>
+                <td>{{ $license->product->name }}</td>
                 <td class="item">
                     <div class="item__value">{{ $license->created_at }}</div>
 
@@ -26,6 +27,7 @@
                         </svg>
                     </a>
                     <form id="delete-form" action="/licenses/{{ $license->id }}" method="POST" style="display: none;">
+                        @method('DELETE')
                         @csrf
                     </form>
                 </td>
