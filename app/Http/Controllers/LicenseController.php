@@ -9,6 +9,10 @@ use Illuminate\Support\Str;
 
 class LicenseController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     // @desc    GET all Licenses
     // @route   GET /licenses
     // @action  index
