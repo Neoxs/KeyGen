@@ -36,7 +36,11 @@
     background-color: var(--color-grey-light-1);
 
     // FOR TESTING
-    height: 80rem;
+    min-height: 80rem;
 
     flex: 1;
+}
+
+.section-tours {
+    padding: 2.5rem 1.5rem;
 }
