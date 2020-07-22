@@ -38,7 +38,7 @@ class ProductController extends Controller
         $product = Product::create($data);
 
         // Return the created product only for testing
-        return redirect('products.index');
+        return redirect('/products');
     }
 
     // Only for Testing
