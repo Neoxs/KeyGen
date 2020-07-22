@@ -55,6 +55,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -79,6 +85,14 @@ button {
   min-height: 50rem;
 }
 
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .header {
   font-size: 1.4rem;
   height: 7rem;
@@ -91,6 +105,13 @@ button {
 
 .content {
   display: flex;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -213,6 +234,12 @@ button {
   justify-content: center;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .search {
+    display: none;
+  }
+}
+
 .search__input {
   font-family: inherit;
   font-size: inherit;
@@ -315,12 +342,31 @@ button {
   margin-top: 3.5rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+}
+
 .side-nav__item {
   position: relative;
 }
 
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item {
+    flex: 1;
+  }
 }
 
 .side-nav__item::before {
@@ -359,6 +405,22 @@ button {
   align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav__link:link,
+  .side-nav__link:visited {
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link,
+  .side-nav__link:visited {
+    flex-direction: column;
+    padding: 1.5rem 0.5rem;
+  }
+}
+
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -366,11 +428,26 @@ button {
   fill: currentColor;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
 }
 
 .licenses-header {
@@ -455,6 +532,7 @@ button {
   -moz-perspective: 150rem;
   position: relative;
   height: 30rem;
+  min-width: 20rem;
   margin-bottom: 2.5rem;
 }
 

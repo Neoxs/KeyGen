@@ -52,7 +52,7 @@
                     </div>
                 </nav>
             </header>
-            <div class="content">
+            <div id="content" class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
                         <li class="side-nav__item side-nav__item--active">
