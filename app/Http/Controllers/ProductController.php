@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     // @desc    GET all products
     // @route   GET /products
     // @action  index
@@ -17,7 +21,7 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(10);
 
         // Retun feched products only for testing
-        return response($products);
+        return view('products.index', compact('products'));
     }
 
     // @desc    Add product
@@ -34,6 +38,11 @@ class ProductController extends Controller
         $product = Product::create($data);
 
         // Return the created product only for testing
-        return response($product);
+        return redirect('products.index');
+    }
+
+    // Only for Testing
+    public function create() {
+        return view('products.create');
     }
 }

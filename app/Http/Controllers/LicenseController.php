@@ -9,6 +9,10 @@ use Illuminate\Support\Str;
 
 class LicenseController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     // @desc    GET all Licenses
     // @route   GET /licenses
     // @action  index
@@ -18,7 +22,7 @@ class LicenseController extends Controller
         $licenses = auth()->user()->keys()->get();
 
         // Only for testing
-        return response($licenses);
+        return view('keys.index', compact('licenses'));
     }
 
     // @desc    Create new License
@@ -38,13 +42,9 @@ class LicenseController extends Controller
             $license->product_id = $product->id;
             $license->key = $key;
             $license->save();
-
-            // Only for testing
-            return response($license);
         }
 
-        // Only for testing
-        return response($oldKey);
+        return redirect('/licenses');
 
     }
 
@@ -56,7 +56,6 @@ class LicenseController extends Controller
     {
         $license->delete();
 
-        // Only for testing
-        return response('license was deleted');
+        return redirect('/licenses');
     }
 }
