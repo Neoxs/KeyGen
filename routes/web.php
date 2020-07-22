@@ -21,11 +21,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/products', 'ProductController@index');
+Route::get('/products/create', 'ProductController@create');
+
+Route::get('/products', 'ProductController@index')->name('products');
 
 Route::post('/products', 'ProductController@store');
 
-Route::get('/licenses', 'LicenseController@index');
+Route::get('/licenses', 'LicenseController@index')->name('licenses');
 
 Route::post('/products/{product}/licenses', 'LicenseController@store');
 

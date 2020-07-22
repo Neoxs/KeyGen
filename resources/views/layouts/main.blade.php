@@ -55,8 +55,8 @@
             <div id="content" class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
-                        <li class="side-nav__item side-nav__item--active">
-                            <a href="#" class="side-nav__link">
+                        <li class="side-nav__item {{ Route::is('home') ? 'side-nav__item--active' : '' }}">
+                            <a href="/home" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
                                 </svg>
@@ -64,7 +64,7 @@
                             </a>
                         </li>
 
-                        <li class="side-nav__item">
+                        <li class="side-nav__item {{ Route::is('profile') ? 'side-nav__item--active' : '' }}">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-user"></use>
@@ -73,7 +73,7 @@
                             </a>
                         </li>
 
-                        <li class="side-nav__item">
+                        <li class="side-nav__item {{ Route::is('products') ? 'side-nav__item--active' : '' }}">
                             <a href="/products" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-price-tag"></use>
@@ -82,7 +82,7 @@
                             </a>
                         </li>
 
-                        <li class="side-nav__item">
+                        <li class="side-nav__item {{ Route::is('licenses') ? 'side-nav__item--active' : '' }}">
                             <a href="/licenses" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-key"></use>

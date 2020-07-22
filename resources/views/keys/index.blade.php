@@ -23,7 +23,7 @@
 
                     <a class="item__delete" href="#" onclick="event.preventDefault();document.getElementById('delete-form').submit();">
                         <svg class="item__delete-btn">
-                            <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                            <use xlink:href="img/sprite.svg#icon-erase"></use>
                         </svg>
                     </a>
                     <form id="delete-form" action="/licenses/{{ $license->id }}" method="POST" style="display: none;">
