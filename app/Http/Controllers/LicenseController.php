@@ -55,7 +55,7 @@ class LicenseController extends Controller
     public function destroy(License $license)
     {
         $license->delete();
-        
+
         return redirect('/licenses');
     }
 }

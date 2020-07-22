@@ -193,6 +193,13 @@ button {
   margin-top: 10rem !important;
 }
 
+.page-header {
+  text-align: center;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
 .logo {
   height: 3.75rem;
   width: 3.75rem;
@@ -412,34 +419,34 @@ button {
   color: var(--color-primary);
 }
 
-.licenses-table .row .item {
+.licenses-table .table-row .item {
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
 }
 
-.licenses-table .row .item__delete {
+.licenses-table .table-row .item__delete {
   float: left;
   margin-left: 2rem;
 }
 
-.licenses-table .row .item__delete-btn {
+.licenses-table .table-row .item__delete-btn {
   width: 1.75rem;
   display: none;
   transition: display 1s;
 }
 
-.licenses-table .row .item__delete-btn:active {
+.licenses-table .table-row .item__delete-btn:active {
   transform: translateY(2px);
 }
 
-.licenses-table .row .item:hover .item__delete-btn {
+.licenses-table .table-row .item:hover .item__delete-btn {
   display: block;
   height: 1.75rem;
 }
 
-.licenses-table .row .item:hover .item__value {
+.licenses-table .table-row .item:hover .item__value {
   transform: translateX(-20px);
 }
 
@@ -628,15 +635,6 @@ button {
 
 .btn--white::after {
   background-color: var(--color-white);
-}
-
-.btn--green {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.btn--green::after {
-  background-color: var(--color-primary);
 }
 
 .btn::after {

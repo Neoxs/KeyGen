@@ -237,7 +237,7 @@
             color: var(--color-primary);
         }
 
-        & .row {
+        & .table-row {
             & .item {
                 display: flex;
                 justify-content: space-between;
@@ -260,7 +260,7 @@
                 &__delete-btn:active { transform: translateY(2px); }
 
                 &:hover .item__delete-btn { display: block;  height: 1.75rem;}
-                &:hover .item__value { transform: translateX(-20px)}; 
+                &:hover .item__value { transform: translateX(-20px)};
 
             }
         }
@@ -279,7 +279,7 @@
     height: 30rem;
     margin-bottom: 2.5rem;
 
-    
+
     &__side {
         height: 30rem;
         transition: all .8s ease;
@@ -313,7 +313,7 @@
             }
         }
     }
-  
+
 
     &:hover &__side--front {
         transform: rotateY(-180deg);
@@ -366,7 +366,7 @@
             rgba(var(--color-secondary-light, .85)),
             rgba(var(--color-secondary-dark, .85)));
         }
-        
+
         &--2 {
             background-image: linear-gradient(to right bottom,
             rgba(var(--color-primary-light, .85)),
@@ -471,18 +471,9 @@
         &::after {
             background-color: var(--color-white);
         }
-        
+
     }
 
-    &--green {
-        background-color: var(--color-primary);
-        color: var(--color-white);
-
-        &::after {
-            background-color: var(--color-primary);
-        }
-        
-    }
 
     &::after {
         content: "";

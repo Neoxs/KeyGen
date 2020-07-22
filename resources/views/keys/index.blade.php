@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h2 class="licenses-header">Your Products Lincecses</h2>
+    <h2 class="page-header">Your Products Lincecses</h2>
     <br>
     <table class="licenses-table">
         <thead class="licenses__head">
@@ -14,7 +14,7 @@
         </thead>
         <tbody>
         @foreach($licenses as $key => $license)
-            <tr class="row">
+            <tr class="table-row">
                 <td>{{ $key + 1 }}</td>
                 <td>{{ $license->key }}</td>
                 <td>{{ $license->product->name }}</td>

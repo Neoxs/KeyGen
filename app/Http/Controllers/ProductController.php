@@ -21,7 +21,7 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(10);
 
         // Retun feched products only for testing
-        return response($products);
+        return view('products.index', compact('products'));
     }
 
     // @desc    Add product
