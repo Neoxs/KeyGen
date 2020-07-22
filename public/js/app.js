@@ -37334,15 +37334,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/main.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/main.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/home/neox/Desktop/KeyGen/resources/sass/main.scss'\n    at /home/neox/Desktop/KeyGen/node_modules/webpack/lib/NormalModule.js:316:20\n    at /home/neox/Desktop/KeyGen/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /home/neox/Desktop/KeyGen/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /home/neox/Desktop/KeyGen/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!****************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/main.scss ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/neox/Desktop/KeyGen/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/neox/Desktop/KeyGen/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/neox/Desktop/KeyGen/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/neox/Desktop/KeyGen/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
